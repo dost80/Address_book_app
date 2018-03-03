@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+</head>
+<body>
+    <form action="#" method="POST">
+        {% csrf_token %}
+        <lable>
+            First name:
+            <input type="text" name="first_name" value="{{ person.first_name }}">
+        </lable>
+        <lable>
+            Last name:
+            <input type="text" name="last_name" value="{{ person.last_name }}">
+        </lable>
+        <lable><br>
+            Description:
+            <input type="text" name="description" value="{{ person.description }}">
+        </lable><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p><a href="/">Back</a></p>
+</body>
+</html>

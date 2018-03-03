@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Address</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h3>Edit address</h3>
+        <lable>
+            City:
+            <input type="text" name="city" value="{{ address.city }}">
+        </lable>
+        <lable>
+            Street:
+            <input type="text" name="street" value="{{ address.street }}">
+        </lable>
+        <lable><br>
+            House_no:
+            <input type="text" name="house_no" value="{{ address.house_no }}">
+        </lable><br>
+        <lable><br>
+            Flat_no:
+            <input type="text" name="flat_no" value="{{ address.flat_no }}">
+        </lable><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p><a href="/">Back</a></p>
+</body>
+</html>

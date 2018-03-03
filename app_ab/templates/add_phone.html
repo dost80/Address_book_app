@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Phone</title>
+</head>
+<body>
+    <h2>New Phone number</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label>Phone_number:
+            <input type="text" name="phone_no">
+        </label><br>
+        <label>Number type:
+            <input type="text" name="no_type">
+        </label><br>
+        <label>
+            <input type="submit" value="Submit">
+        </label>
+    </form>
+    <p><a href="/">Back</a></p>
+</body>
+</html>

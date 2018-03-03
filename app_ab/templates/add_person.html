@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Person</title>
+</head>
+<body>
+    <h2>New Contact</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <label>First name:
+            <input type="text" name="first_name">
+        </label>
+        <label>Last name:
+            <input type="text" name="last_name">
+        </label><br>
+        <label>Description:
+            <input type="text" name="description">
+        </label><br>
+        <label>
+            <input type="submit" value="Submit">
+        </label>
+    </form>
+    <p><a href="/">Back</a></p>
+</body>
+</html>

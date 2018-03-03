@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact details</title>
+</head>
+    <body>
+        <h2>Contact:</h2>
+        <p>First Name: {{ person.first_name }}</p>
+        <p>Last Name: {{ person.last_name }}</p>
+        <p>Description: {{ person.description }}</p>
+        <p><a href="/modify/{{ person.id }}/"> Edit contact </a> &nbsp </p>
+        <h3>Address:</h3>
+        {% for address in person.person_address.all %}
+            <p>City: {{ address.city }}</p>
+            <p>Street: {{ address.street }}</p>
+            <p>House_no: {{ address.house_no }}</p>
+            <p>Flat_no: {{ address.flat_no }}</p>
+        <a href="/edit_address/{{ person.id }}/{{ address.id }}">edit address</a>
+        <a href="/delete_address/{{ person.id }}/{{ address.id }}">delete address</a>
+        {% endfor %}<br>
+        <a href="/add_address/{{ person.id }}">add address</a>
+        <h3>Phone no.:</h3>
+        {% for phone in person.person_phone.all %}
+            <p>Phone number: {{ phone.phone_no }}</p>
+            <p>Number type: {{ phone.no_type }}</p>
+        <a href="/edit_phone/{{ person.id }}/{{ phone.id }}">edit phone</a>
+        <a href="/delete_phone/{{ person.id }}/{{ phone.id }}">delete phone</a>
+        {% endfor %}<br>
+        <a href="/add_phone/{{ person.id }}">add phone</a>
+        <h3>Email:</h3>
+        {% for email in person.person_email.all %}
+            <p>Email: {{ email.email }}</p>
+            <p>Email type: {{ email.email_type }}</p>
+        <a href="/edit_email/{{ person.id }}/{{ email.id }}">edit email</a>
+        <a href="/delete_email/{{ person.id }}/{{ email.id }}">delete email</a>
+        {% endfor %}<br>
+        <a href="/add_email/{{ person.id }}">add email</a>
+        <p><a href="/">Back</a></p>
+    </body>
+</html>

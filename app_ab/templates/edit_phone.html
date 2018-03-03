@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phone</title>
+</head>
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <h3>Edit phone</h3>
+        <lable>
+            Phone_number:
+            <input type="text" name="phone_no" value="{{ phone.phone_no }}">
+        </lable><br>
+        <lable><br>
+            Number type:
+            <input type="text" name="no_type" value="{{ phone.no_type }}">
+        </lable><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p><a href="/">Back</a></p>
+</body>
+</html>
